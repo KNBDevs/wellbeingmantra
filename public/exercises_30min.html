@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Ejercicios de 5 Minutos</title>
+</head>
+
+<body>
+    <header>
+        <img class="header-image" src="images/web/back_header.png" alt="Encabezado">
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img class="logo" src="images/web/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sounds.html">Sonidos</a></li>
+                <li><a href="exercises.html">Ejercicios</a></li>
+                <li><a href="mantras.html">Mantras</a></li>
+                <li><a href="books.html">Libros</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="shop.html">Artículos</a></li>
+                <li><a href="forum.html">Foro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="section-navigation">
+            <a href="exercises_5min.html?category=5min">5 Minutos</a>
+            <a href="exercises_10min.html?category=10min">10 minutos</a>
+            <a href="exercises_15min.html?category=15min">15 minutos</a>
+            <a href="exercises_30min.html?category=30min">30 minutos</a>
+            <a href="exercisesOver30.html?category=over30min">+30 minutos</a>
+        </div>
+        
+
+        <h1>Rutinas de 30 Minutos</h1>
+
+        <div class="intro-short">
+            <p>Aquí ya habrás comprobado que lo que parecía imposible, no lo es... <br><br>
+                Ahora que sabes que puedes cumplir tu rutina de 30 minutos, no lo dejes, es un gran logro. </p>
+        </div>
+
+        <div class="exercise-list">
+            <!-- Aquí se cargarán los ejercicios -->
+        </div>
+
+        <div class="pagination">
+            <button onclick="goToPage('first')">|<</button>
+            <button onclick="goToPage('prev')"><</button>
+            <button onclick="goToPage('prev3')"><<</button>
+            <span class="page-info">1/1</span>
+            <button onclick="goToPage('next')">></button>
+            <button onclick="goToPage('next3')">>></button>
+            <button onclick="goToPage('last')">>|</button>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+            <li><a href="cookie-policy.html">Política de Cookies</a></li>
+            <li><a href="about.html">Sobre el Proyecto</a></li>
+            <li><a href="mailto:contact@wellbeing.com">Contacto</a></li>
+        </ul>
+        <p>
+            &copy; 2024<span><a class="linkspan" href="./index.html"> WellBeing Mantra.</a></span>
+            Todos los Derechos Reservados. Web by KNBDev.
+        </p>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script src="js/exercises.js"></script>
+</body>
+
+</html>

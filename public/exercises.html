@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Ejercicios recomendados</title>
+</head>
+
+<body>
+    <header>
+        <img class="header-image" src="images/web/back_header.png" alt="Encabezado">
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img class="logo" src="images/web/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sounds.html">Sonidos</a></li>
+                <li><a href="exercises.html">Ejercicios</a></li>
+                <li><a href="mantras.html">Mantras</a></li>
+                <li><a href="books.html">Libros</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="shop.html">Artículos</a></li>
+                <li><a href="forum.html">Foro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Ejercicios recomendados</h1>
+
+        <section class="intro-short">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2 id="inicio">Dedica un tiempo a tu cuerpo...</h2>
+                    <p>No hablamos de que tengas que "matarte" en el gimnasio, crossfit o algún deporte competitivo,
+                        hablamos de pequeños gestos que harán que, poco a poco, te sientas mejor y ocupes tu tiempo de 
+                        una forma productiva. <br><br>
+                        No tienes excusa por el tiempo ni el ánimo... si hay algo en lo que coger buen hábito y obligarte
+                        a hacer es: algo de ejercicio. Verás rutinas de todo tipo, no hace falta que cambies de una a otra
+                        cada semana, ni cada mes... adecúate a la que mejor se adapte y, con el tiempo, tu mismo o tu misma
+                        te darás cuenta de que vas a más. <br><br>
+                        Desde 5 minutos a rutinas largas de meditación y ejercicio. ¿Cuál es la que mejor se adapta a tí?
+                        Solo probando lo descubrirás. <br><br>
+                        Todo es empezar, y estando aquí, ya has empezado.
+                    </p>
+                </div>
+                <img class="img_symbol" src="images/web/exercise_img.png" alt="Símbolo Om">
+            </div>
+        </section>
+
+        <div class="section-navigation">
+            <a href="exercises_5min.html?category=5min">5 Minutos</a>
+            <a href="exercises_10min.html?category=10min">10 minutos</a>
+            <a href="exercises_15min.html?category=15min">15 minutos</a>
+            <a href="exercises_30min.html?category=30min">30 minutos</a>
+            <a href="exercisesOver30.html?category=over30min">+30 minutos</a>
+        </div>
+        
+
+        <div class="exercise-list">
+            <!-- Aquí se cargarán los ejercicios -->
+        </div>
+
+        <div class="pagination">
+            <button onclick="goToPage('first')">|<</button>
+            <button onclick="goToPage('prev')"><</button>
+            <button onclick="goToPage('prev3')"><<</button>
+            <span class="page-info">1/1</span>
+            <button onclick="goToPage('next')">></button>
+            <button onclick="goToPage('next3')">>></button>
+            <button onclick="goToPage('last')">>|</button>
+        </div>
+
+        <a href="#" class="scroll-to-top" title="Volver arriba">↑</a>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+            <li><a href="cookie-policy.html">Política de Cookies</a></li>
+            <li><a href="about.html">Sobre el Proyecto</a></li>
+            <li><a href="mailto:contact@wellbeing.com">Contacto</a></li>
+        </ul>
+        <p>
+            &copy; 2024<span><a class="linkspan" href="./index.html"> WellBeing Mantra.</a></span>
+            Todos los Derechos Reservados. Web by KNBDev.
+        </p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/exercises.js"></script>
+</body>
+
+</html>

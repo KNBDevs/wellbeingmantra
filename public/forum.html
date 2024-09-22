@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Foro</title>
+</head>
+<body>
+    <header>
+        <img class="header-image" src="images/web/back_header.png" alt="Encabezado">
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img class="logo" src="images/web/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sounds.html">Sonidos</a></li>
+                <li><a href="exercises.html">Ejercicios</a></li>
+                <li><a href="mantras.html">Mantras</a></li>
+                <li><a href="books.html">Libros</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="shop.html">Artículos</a></li>
+                <li><a href="forum.html">Foro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Foro</h1>
+        <div class="auth-bar">
+            <div id="login-form" class="auth-form">
+                <h3>Login</h3>
+                <form onsubmit="return loginUser(event)">
+                    <label for="login-nick">Nick:</label>
+                    <input type="text" id="login-nick" name="nick" required>
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" name="password" required>
+                    <button type="submit">Iniciar sesión</button>
+                </form>
+                <button onclick="toggleAuthForm()">Registrarse</button>
+            </div>
+            <div id="register-form" class="auth-form" style="display:none;">
+                <h3>Registro</h3>
+                <form onsubmit="return registerUser(event)">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" name="email" required>
+                    <label for="reg-nick">Nick:</label>
+                    <input type="text" id="reg-nick" name="nick" required>
+                    <label for="reg-password">Contraseña:</label>
+                    <input type="password" id="reg-password" name="password" required>
+                    <button type="submit">Registrarse</button>
+                </form>
+                <button onclick="toggleAuthForm()">Iniciar sesión</button>
+            </div>
+        </div>
+
+        <div id="post-creation" class="post-creation" style="display:none;">
+            <h2>Crear nuevo hilo</h2>
+            <form onsubmit="return createPost(event)">
+                <label for="post-title">Título:</label>
+                <input type="text" id="post-title" name="title" maxlength="40" required>
+                <label for="post-body">Contenido:</label>
+                <textarea id="post-body" name="body" required></textarea>
+                <button type="submit">Crear Hilo</button>
+            </form>
+        </div>
+
+        <div class="forum-container">
+            <!-- Aquí aparecerán los post de forma dinámica -->
+            <div id="posts-list"></div>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+            <li><a href="cookie-policy.html">Política de Cookies</a></li>
+            <li><a href="about.html">Sobre el Proyecto</a></li>
+            <li><a href="mailto:contact@wellbeing.com">Contacto</a></li>
+        </ul>
+        <p>
+            &copy; 2024<span
+              ><a class="linkspan" href="./index.html"> WellBeing Mantra.</a></span>
+            Todos los Derechos Reservados. Web by KNBDev.
+          </p>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script src="js/forum.js"></script>
+
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h3>Registro</h3>
+            <form id="register-popup-form" onsubmit="return registerUser(event)">
+                <label for="popup-email">Email:</label>
+                <input type="email" id="popup-email" name="email" required>
+                <label for="popup-nick">Nick:</label>
+                <input type="text" id="popup-nick" name="nick" required>
+                <label for="popup-password">Contraseña:</label>
+                <input type="password" id="popup-password" name="password" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>    
+</body>
+</html>
